@@ -2,6 +2,7 @@
   <h5 class="my-0 mr-md-auto font-weight-normal"><%= link_to 'User Online', root_path, class: 'text-dark text-decoration-none' %></h5>
 
   <% if user_signed_in? %>
+    <span class="badge badge-success float-right mr-5"><%= @online_users.size %> users online</span>
     <nav class="my-2 my-md-0 mr-md-3">
       <%= link_to 'Home', root_path, class: "text-dark mr-3 text-decoration-none" %>
       <%= link_to 'Settings', edit_user_registration_path, class: "text-dark mr-3 text-decoration-none" %>
